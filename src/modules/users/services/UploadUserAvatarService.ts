@@ -8,7 +8,7 @@ import UsersRepository from '../typeorm/repositories/UsersRepository';
 
 interface IRequest {
   user_id: string;
-  avatarFilename: string;
+  avatarFilename: string | undefined;
 }
 
 class UploadUserAvatarService {
