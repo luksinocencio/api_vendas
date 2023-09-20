@@ -1,0 +1,31 @@
+_id: req_9f3e4e9aa8984ee684fc7b6227eede10
+type: Request
+parentId: fld_3adddf067ed74932abb85a41b0af4c18
+modified: 1695204688887
+created: 1695204688887
+url: "{{base_url}}/products"
+name: Create Copy
+description: ""
+method: POST
+body:
+  mimeType: ""
+  text: "{\r
+
+    \    \"name\": \"Kotlin in Action\",\r
+
+    \    \"price\": 120.90,\r
+
+    \    \"quantity\": 120\r
+
+    }"
+parameters: []
+headers: []
+authentication: {}
+metaSortKey: -1695204688887
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
