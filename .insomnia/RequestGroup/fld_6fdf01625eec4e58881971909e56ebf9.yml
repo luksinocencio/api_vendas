@@ -1,0 +1,12 @@
+_id: fld_6fdf01625eec4e58881971909e56ebf9
+type: RequestGroup
+parentId: wrk_9b60302579a34eabb679cc611799e175
+modified: 1695204688883
+created: 1695204688883
+name: api-vendas
+description: ""
+environment:
+  base_url: localhost:3333
+  token: $2a$08$8UA8NfUhFJ/rAySNQ3Ze6.olqhOmrE7sWLZw13QsMa1kokNsGYcGG
+environmentPropertyOrder: null
+metaSortKey: -1695204688883

@@ -1,0 +1,29 @@
+_id: req_b19a94c26e804d2482c761742ada7d8e
+type: Request
+parentId: fld_132180d299f3446a81f1c036e3b20fd4
+modified: 1695204803248
+created: 1695204688889
+url: "{{base_url}}/sessions"
+name: create
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+        "email": "luksinocencio@mail.com",
+        "password": "123456"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+authentication: {}
+metaSortKey: -1695204688889
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
