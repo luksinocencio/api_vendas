@@ -9,5 +9,5 @@ yarn typeorm migration:run
 ```
 
 ```
-yarn dev
+npm run dev
 ```
