@@ -9,9 +9,5 @@ npm run typeorm migration:run
 ```
 
 ```
-npm run typeorm migration:generate -- -n CreateUserTokens
-```
-
-```
 npm run dev
 ```
