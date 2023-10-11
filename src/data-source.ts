@@ -1,4 +1,4 @@
-import { DataSource } from 'typeorm';
+import { DataSource } from 'typeorm'
 
 const myDataSource = new DataSource({
   type: 'postgres',
@@ -11,6 +11,6 @@ const myDataSource = new DataSource({
   migrations: ['./src/shared/typeorm/migrations/*.ts'],
   logging: true,
   synchronize: true,
-});
+})
 
-export default myDataSource;
+export default myDataSource

@@ -1,9 +1,9 @@
-import { Router } from 'express';
-import { celebrate, Joi, Segments } from 'celebrate';
-import SessionsController from '../controllers/SessionsControllers';
+import { Router } from 'express'
+import { celebrate, Joi, Segments } from 'celebrate'
+import SessionsController from '../controllers/SessionsControllers'
 
-const sessionsRouter = Router();
-const sessionsController = new SessionsController();
+const sessionsRouter = Router()
+const sessionsController = new SessionsController()
 
 sessionsRouter.post(
   '/',
@@ -14,6 +14,6 @@ sessionsRouter.post(
     },
   }),
   sessionsController.create,
-);
+)
 
-export default sessionsRouter;
+export default sessionsRouter

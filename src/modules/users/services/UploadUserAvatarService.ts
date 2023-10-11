@@ -1,41 +1,41 @@
-import path from 'path';
-import AppError from '@shared/errors/AppError';
-import { getCustomRepository } from 'typeorm';
-import fs from 'fs';
-import uploadConfig from '@config/upload';
-import User from '../typeorm/entities/User';
-import UsersRepository from '../typeorm/repositories/UsersRepository';
+import path from 'path'
+import AppError from '@shared/errors/AppError'
+import { getCustomRepository } from 'typeorm'
+import fs from 'fs'
+import uploadConfig from '@config/upload'
+import User from '../typeorm/entities/User'
+import UsersRepository from '../typeorm/repositories/UsersRepository'
 
 interface IRequest {
-  user_id: string;
-  avatarFilename: string | undefined;
+  user_id: string
+  avatarFilename: string | undefined
 }
 
 class UploadUserAvatarService {
   public async execute({ user_id, avatarFilename }: IRequest): Promise<User> {
-    const usersRepository = getCustomRepository(UsersRepository);
+    const usersRepository = getCustomRepository(UsersRepository)
 
-    const user = await usersRepository.findById(user_id);
+    const user = await usersRepository.findById(user_id)
 
     if (!user) {
-      throw new AppError('User not found.');
+      throw new AppError('User not found.')
     }
 
     if (user.avatar) {
-      const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar);
-      const userAvatarFileExists = await fs.promises.stat(userAvatarFilePath);
+      const userAvatarFilePath = path.join(uploadConfig.directory, user.avatar)
+      const userAvatarFileExists = await fs.promises.stat(userAvatarFilePath)
 
       if (userAvatarFileExists) {
-        await fs.promises.unlink(userAvatarFilePath);
+        await fs.promises.unlink(userAvatarFilePath)
       }
     }
 
-    user.avatar = avatarFilename;
+    user.avatar = avatarFilename
 
-    await usersRepository.save(user);
+    await usersRepository.save(user)
 
-    return user;
+    return user
   }
 }
 
-export default UploadUserAvatarService;
+export default UploadUserAvatarService

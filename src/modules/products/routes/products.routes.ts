@@ -1,11 +1,11 @@
-import { Router } from 'express';
-import { celebrate, Joi, Segments } from 'celebrate';
-import ProductsController from '../controllers/ProductsController';
+import { Router } from 'express'
+import { celebrate, Joi, Segments } from 'celebrate'
+import ProductsController from '../controllers/ProductsController'
 
-const productsRouter = Router();
-const productsController = new ProductsController();
+const productsRouter = Router()
+const productsController = new ProductsController()
 
-productsRouter.get('/', productsController.index);
+productsRouter.get('/', productsController.index)
 
 productsRouter.get(
   '/:id',
@@ -15,7 +15,7 @@ productsRouter.get(
     },
   }),
   productsController.show,
-);
+)
 
 productsRouter.post(
   '/',
@@ -27,7 +27,7 @@ productsRouter.post(
     },
   }),
   productsController.create,
-);
+)
 
 productsRouter.put(
   '/:id',
@@ -42,7 +42,7 @@ productsRouter.put(
     },
   }),
   productsController.update,
-);
+)
 
 productsRouter.delete(
   '/:id',
@@ -52,6 +52,6 @@ productsRouter.delete(
     },
   }),
   productsController.delete,
-);
+)
 
-export default productsRouter;
+export default productsRouter
