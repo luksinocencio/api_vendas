@@ -1,3 +1,33 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:f140cd7ee288eb52445325b601d88383df2fda7b65cbb66d59e1b4abdb19fb79
-size 428
+import {
+  Column,
+  CreateDateColumn,
+  Entity,
+  PrimaryGeneratedColumn,
+  UpdateDateColumn,
+} from 'typeorm'
+
+@Entity('users')
+class User {
+  @PrimaryGeneratedColumn('uuid')
+  id: string
+
+  @Column()
+  name: string
+
+  @Column()
+  email: string
+
+  @Column()
+  password: string
+
+  @Column()
+  avatar: string
+
+  @CreateDateColumn()
+  created_at: Date
+
+  @UpdateDateColumn()
+  updated_at: Date
+}
+
+export default User
