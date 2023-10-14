@@ -1,3 +1,14 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:66adfad94361f5c816f25a81aaab7de9b2691c5233ff340801b3dd88e2537c33
-size 232
+* text=auto
+
+.*      text eol=lf
+*.css   text eol=lf
+*.html  text eol=lf
+*.jade  text eol=lf
+*.js    text eol=lf
+*.json  text eol=lf
+*.less  text eol=lf
+*.scss  text eol=lf
+*.md    text eol=lf
+*.sh    text eol=lf
+*.txt   text eol=lf
+*.xml   text eol=lf
